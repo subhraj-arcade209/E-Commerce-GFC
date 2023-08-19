@@ -1,0 +1,191 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.loginback-video{
+    position:absolute;
+    right:0;
+    bottom:0;
+    opacity:2;
+    z-index: -1;
+    padding-top:20px;
+  }
+.form-box{
+    position: relative;
+    width: 370px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1.5s infinite;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin-bottom:50px;
+    font-family: 'Amita', cursive;
+    margin-top:30px;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #0be1b3;
+    font-family: 'Satisfy', cursive;
+    
+}
+.inputbox label{
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(50%);
+    color: #fff;
+    font-size: 20px;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Satisfy', cursive;
+}
+.inputbox input:valid,
+.inputbox input:focus {
+    outline: none;
+}
+.inputbox input:valid + label,
+.inputbox input:focus + label {
+    transform: translateY(0);
+}
+.inputbox label {
+  transition: all 0.4s ease-in-out;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding:0 35px 0 1px;
+    margin-top:15px;
+    font-size:19px;
+    color:aquamarine;
+    font-weight:600;
+    text-shadow: 1px 1px 5px black;
+    letter-spacing:2px;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.4em;
+    top: 20px;
+    cursor:pointer;
+}
+.forget{
+    margin:0 15px ;
+    font-size: 1.3em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+    padding-top:45px;
+    padding-left:-30px;
+    
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Marck Script', cursive;
+    padding-top:30px;
+    text-decoration: underline;
+    font-weight:400;
+}
+.forget label a:hover{
+    text-decoration: underline;
+    color:rgb(163, 244, 0);
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p{
+    font-family: 'Satisfy', cursive;
+    font-size:17px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Amita', cursive;
+    font-size:20px;
+    text-decoration: underline;
+}
+.register p a:hover{
+    text-decoration: underline;
+    color:aqua;
+}
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    z-index:1;
+  }
+  .close:hover {
+    color:red;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 20px;
+    content: ' ';
+    height: 23px;
+    width: 4px;
+    background-color:red;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+@keyframes animation {
+   100%{
+    background-position:0px -2000px;
+  }
+}
+@keyframes bounce {
+    0% {
+      tranform: translate(0, 4px);
+    }
+    50% {
+      transform: translate(0, 8px);
+    }
+  } 
+  @media(min-aspect-ratio:16/9){
+    .loginback-video{
+      width:100%;
+      height:auto;
+    }
+  }
+  @media(max-aspect-ratio:16/9){
+    .loginback-video{
+      width:auto;
+      height:100%;
+    }
+  }
